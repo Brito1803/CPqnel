@@ -20,9 +20,9 @@ RUN apt-get update && apt-get install -y \
   && a2enmod rewrite
 
 # Set up MySQL database
-RUN service mysql start && mysql -e "CREATE USER 'admin'@'localhost' IDENTIFIED BY 'password_kuat';" \
-  && mysql -e "GRANT ALL PRIVILEGES ON *.* TO 'admin'@'localhost' WITH GRANT OPTION;" \
-  && mysql -e "FLUSH PRIVILEGES;"
+RUN service mysql start && mysql -y
+  && mysql -e 
+  && mysql -y
 
 # Install phpMyAdmin
 RUN wget https://files.phpmyadmin.net/phpMyAdmin/5.1.1/phpMyAdmin-5.1.1-all-languages.zip \
