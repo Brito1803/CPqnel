@@ -21,7 +21,7 @@ RUN apt-get update && apt-get install -y \
 
 # Set up MySQL database
 RUN service mysql start && mysql -y
-  && mysql -e 
+  && mysql -y
   && mysql -y
 
 # Install phpMyAdmin
